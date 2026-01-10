@@ -57,6 +57,12 @@ dependencies {
     // Lifecycle Service
     implementation(libs.androidx.lifecycle.service)
     
+    // Markwon - Markdown渲染库（支持LaTeX数学公式）
+    implementation(libs.markwon.core)
+    implementation(libs.markwon.ext.latex)
+    implementation(libs.markwon.html)
+    implementation(libs.markwon.inline.parser)
+    
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

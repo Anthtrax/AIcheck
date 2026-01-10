@@ -12,7 +12,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
+import android.text.method.LinkMovementMethod
 import androidx.core.content.ContextCompat
+import io.noties.markwon.Markwon
+import io.noties.markwon.ext.latex.JLatexMathPlugin
+import io.noties.markwon.html.HtmlPlugin
+import io.noties.markwon.inlineparser.MarkwonInlineParserPlugin
 
 /**
  * 隐蔽悬浮窗服务
@@ -62,11 +67,33 @@ class OverlayService : Service() {
     private var isTextVisible = true
     private var currentText = ""
     
+    // Markwon实例 - 用于渲染Markdown和LaTeX数学公式
+    private lateinit var markwon: Markwon
+    
     override fun onCreate() {
         super.onCreate()
         instance = this
-        createOverlayView()
+        createOverlayView()  // 先创建 TextView
+        initMarkwon()        // 再初始化 Markwon
         Log.d(TAG, "OverlayService created")
+    }
+    
+    /**
+     * 初始化Markwon实例
+     * 配置LaTeX数学公式支持和HTML解析
+     */
+    private fun initMarkwon() {
+        val textSize = textView?.textSize ?: 36f
+        markwon = Markwon.builder(this)
+            .usePlugin(HtmlPlugin.create())
+            .usePlugin(MarkwonInlineParserPlugin.create())
+            .usePlugin(JLatexMathPlugin.create(textSize) { builder ->
+                // 配置LaTeX渲染选项
+                builder.inlinesEnabled(true)  // 启用行内公式 $...$
+                builder.blocksEnabled(true)   // 启用块级公式 $$...$$
+            })
+            .build()
+        Log.d(TAG, "Markwon initialized with LaTeX support, textSize=$textSize")
     }
     
     override fun onBind(intent: Intent?): IBinder? = null
@@ -95,7 +122,7 @@ class OverlayService : Service() {
             setTextColor(0x99FFFFFF.toInt())  // 半透明白色
             textSize = 12f
             setPadding(16, 8, 16, 8)
-            setBackgroundColor(0x33000000)  // 非常透明的黑色背景
+            setBackgroundColor(0x33300000)  // 非常透明的黑色背景
             gravity = Gravity.START
             maxLines = 10
         }
@@ -144,12 +171,15 @@ class OverlayService : Service() {
     private fun showOverlayText(text: String) {
         currentText = text
         textView?.post {
-            textView?.text = text
+            // 使用Markwon的setMarkdown方法来正确渲染LaTeX公式图片
+            textView?.let { tv ->
+                markwon.setMarkdown(tv, text)
+            }
             if (isTextVisible) {
                 overlayView?.visibility = View.VISIBLE
             }
         }
-        Log.d(TAG, "Showing text: ${text.take(50)}...")
+        Log.d(TAG, "Showing text with Markdown/LaTeX rendering: ${text.take(50)}...")
     }
     
     private fun toggleTextVisibility() {
